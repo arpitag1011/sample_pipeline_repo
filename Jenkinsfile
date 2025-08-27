@@ -4,20 +4,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'npm install'
+                bat '"C:\\Program Files\\nodejs\\npm.cmd" install'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'npm test'
+                bat '"C:\\Program Files\\nodejs\\npm.cmd" test'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying React App...'
-                // put actual deploy commands here
             }
         }
     }
